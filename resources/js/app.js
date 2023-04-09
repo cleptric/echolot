@@ -1,7 +1,6 @@
-import './bootstrap'
+import './bootstrap';
 
-import * as Sentry from "@sentry/browser"
-
+import * as Sentry from '@sentry/browser'
 Sentry.init({
     dsn: import.meta.env.VITE_SENTRY_DSN,
     environment: import.meta.env.VITE_SENTRY_ENVIRONMENT,
@@ -11,3 +10,11 @@ Sentry.init({
     ],
     tracesSampleRate: import.meta.env.VITE_SENTRY_TRACES_SAMPLE_RATE,
 })
+
+import Alpine from 'alpinejs';
+import focus from '@alpinejs/focus';
+window.Alpine = Alpine;
+
+Alpine.plugin(focus);
+
+Alpine.start();
