@@ -15,11 +15,6 @@ class CheckIn extends Model
     
     const UPDATED_AT = null;
 
-    protected $fillable = [
-        'monitor_id',
-        'http_status',
-    ];
-
     public function monitor(): BelongsTo
     {
         return $this->belongsTo(Monitor::class);

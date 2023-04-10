@@ -28,9 +28,7 @@ class CheckInsController extends Controller
         ]);
 
         $monitor = Monitor::where('slug', $request->get('monitor_slug'))->firstOrFail();
-
-        $checkIn = CheckIn::create([
-            'monitor_id' => $monitor->id,
+        $checkIn = $monitor->checkIns()->forceCreate([
             'http_status' => $request->get('http_status'),
         ]);
 
