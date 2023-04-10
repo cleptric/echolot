@@ -1,0 +1,6 @@
+procs:
+  artisan_serve: "php artisan serve"
+  npm_dev: "npm run dev"
+  cargo_run:
+    cwd: "geber"
+    shell: "cargo run"
