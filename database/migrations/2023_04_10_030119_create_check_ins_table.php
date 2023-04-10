@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('check_ins', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->ulid('id')->primary();
             $table->foreignId('monitor_id')->constrained();
             $table->integer('http_status');
             $table->timestamp('created_at')->nullable();
