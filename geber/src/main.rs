@@ -66,8 +66,8 @@ async fn report_uptime_check(
     };
 
     let json = json!({
-        "project_id": monitor.slug,
-        "http_status": http_status.as_str(),
+        "monitor_slug": monitor.slug,
+        "http_status": http_status.as_u16(),
     });
 
     println!("reporting uptime check {} with status {}", monitor.slug, http_status);
