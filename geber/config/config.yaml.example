@@ -1,0 +1,4 @@
+# General Settings
+upstream: "<echolot-upstream-url>"
+name: "<nam-of-the-geber-probe>"
+api_token: "<something-secret>"
