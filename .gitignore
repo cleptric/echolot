@@ -27,4 +27,4 @@ target/
 **/*.rs.bk
 
 geber/config/config.yaml
-geber/config/monitors.yaml
+geber/config/monitors.json
